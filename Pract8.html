@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>CSS Layout</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href='css8.css' rel='stylesheet' type='text/css'>
+    <script src="js8.js"></script>
+</head>
+
+<body>
+    <div class="header" style="box-shadow: 10px 10px 5px lightblue;">
+        <div><img src="a/globe.png" style="float:left; width:100px; height:100px;"></img>
+        </div>
+        <h1>Globe Search</h1>
+    </div>
+
+    <div class="topnav">
+        <a href="#" style="float:left"><img src="a/home.png" width="20px" height="20px"></img>   Home</a>
+        <a href="#" style="float:left"><img src="a/contact.png" width="20px" height="20px"></img>   Contact</a>
+        <a href="#" style="float:left"><img src="a/about.png" width="20px" height="20px"></img>   About</a>
+        <a href="#" style="float:right"><img src="a/signin.png" width="20px" height="20px"></img>   SignIn</a>
+        <a href="#" style="float:right; width:315px; padding-top:6px; padding-bottom:7px;">
+            <form autocomplete="off" style="float:left">
+                <div class="autocomplete">
+                    <input class="sinput" id="myInput" type="text" name="myCountry" placeholder="Country"></input>
+                </div>
+            </form>
+            <div style="float:right; padding-top: 5px;">
+                <button type="button" class="sbutton" onclick="search()">
+					<img src="a/search.png" width="15px" height="15px"></img> Search
+				</button>
+            </div>
+        </a>
+
+    </div>
+
+
+    <div class="row">
+
+        <div class="leftcolumn">
+            <div class="card">
+                <h2>About Us</h2>
+                <div class="fakeimg" style="height:100px;">
+                    <b><big>Globe Search</big></b>
+                </div>
+                <p>Get Information about different countries at one palce.</p>
+            </div>
+            <div class="card">
+                <h3>Follow Us</h3>
+                <div>
+                    <a href="https://www.facebook.com/" target="_blank"><img src="a/facebook.png" width="50px" height="50px"></img></a>
+                    <a href="https://www.whatsapp.com/" target="_blank"><img src="a/whatsapp.png" width="50px" height="50px"></img></a>
+                    <a href="https://twitter.com/" target="_blank"><img src="a/twitter.png" width="50px" height="50px"></img></a>
+                    <a href="https://www.youtube.com/" target="_blank"><img src="a/youtube.png" width="50px" height="50px"></img></a>
+                    <a href="https://www.instagram.com/" target="_blank"><img src="a/instagram.png" width="50px" height="50px"></img></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="midcolumn">
+            <div class="card" id="initial">
+                <h2><img src="a/india.png" style="width:50px; height:50px;"></img> India</h2>
+                <h5>As on, Oct 31, 2022</h5>
+                <div class="fakeimg"><a href="https://en.wikipedia.org/wiki/India" target="_blank"><img class="img" src="https://cdn.mos.cms.futurecdn.net/3FnczamRyWU6MvRMEXWaGD.jpg" style="width:100%; height:400px;"></a></div>
+                <p style="text-align: justify;">India, officially the Republic of India (Hindi: Bhārat Gaṇarājya), is a country in South Asia. It is the seventh-largest country by area, the second-most populous country, and the most populous democracy in the world. Bounded by the Indian Ocean on the south, the Arabian Sea on the southwest, and the Bay of Bengal on the southeast, it shares land borders with Pakistan to the west; China, Nepal, and Bhutan to the north; and Bangladesh and Myanmar to the east. In the Indian Ocean, India is in the vicinity of Sri Lanka and the Maldives; its Andaman and Nicobar Islands share a maritime border with Thailand, Myanmar, and Indonesia. The nation's capital city is New Delhi.</p>
+                <a href="https://en.wikipedia.org/wiki/India" target="_blank"><button class="button"> <img src="a/wikipedia.png" width="30px" height="30px"></img> <b><sup>Get Info</sup></b> </button></a>
+            </div>
+            <div class="card" id="search" style="display:none;">
+                <h2 id="title"></h2>
+                <h5>As on, Oct 31, 2022</h5>
+                <div id="image" class="fakeimg"></div>
+                <p id="info" style="text-align: justify;"></p>
+                <p id="link"><a href="https://en.wikipedia.org/wiki/India" target="_blank"><button class="button"> <img class="img" src="a/wikipedia.png" width="30px" height="30px"></img> <b><sup>Get Info</sup></b> </button></a></p>
+            </div>
+        </div>
+
+        <div class="rightcolumn">
+            <div class="card">
+                <h3>Popular Post</h3>
+                <div class="fakeimg" onclick="setterI()">
+                    <a href="#">
+                        <p><img src="a/india.png" style="width:25px; height:25px;"> India</p>
+                    </a>
+                </div>
+
+                <div class="fakeimg">
+                    <a href="#" onclick="setterU()">
+                        <p><img src="a/ukraine.png" style="width:25px; height:25px;"> Ukraine</p>
+                    </a>
+                </div>
+
+                <div class="fakeimg">
+                    <a href="#" onclick="setterR()">
+                        <p><img src="a/russia.png" style="width:25px; height:25px;"> Russia</p>
+                    </a>
+                </div>
+                <div class="fakeimg">
+                    <a href="#" onclick="setterA()">
+                        <p><img src="a/america.png" style="width:25px; height:25px;"> America</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div><br><br>
+
+    <div class="footer">
+        <h2>Globe Search</h2>
+        <p><i>Copyright @ISO-2022</i></p>
+    </div>
+
+
+    <script>
+        autocomplete(document.getElementById("myInput"), countries);
+    </script>
+</body>
+
+</html>
